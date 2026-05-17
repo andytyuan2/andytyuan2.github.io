@@ -25,6 +25,6 @@ Here is a list of what I am interested in broadly, alongside a resource I am rea
 
 I have worked for a variety of companies in the tech and financial industries. The most recent is at TD Securities, a branch of TD Bank focused on investment and trading. To sum up what I do at the bank, I process trading desk data, compare with external sources, then come back with a sum of differences for each desk. We go from there depending on the desk. In essence, we want the following formula to trend towards 0.
 
-$$(\text{Vendor Price} - \text{Desk Price}) \times \text{Notional Amount}$$
+$$\text{Variance (not that one)} = (\text{Vendor Price} - \text{Desk Price}) \times \text{Notional Amount}$$
 
 Please feel free to email me through the button on the sidebar if you have any questions :)
