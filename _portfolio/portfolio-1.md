@@ -1,7 +1,9 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Option Implied Volatility Plots - 2023"
+excerpt: "Example of an option implied vol surface:<br/><img src='/images/option impvol surface.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+This was one of my first projects using Python and financial data. It was when I first realized I really liked statistics and math over accounting, so I put together what I knew from both and created these simple plots. At the time, I thought it was a worthwhile project, but looking back, it is quite elementary and solely exploratory. We all start somewhere :)
+
+Please take a look at the following link! [Options Implied Volatility Plots](https://github.com/andytyuan2/Option-Volatility-Plots)
