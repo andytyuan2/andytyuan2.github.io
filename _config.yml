@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "sunrise" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Andy's Page!"
+title                    : "Andy Yuan"
 title_separator          : "-"
 name                     : &name "Andy"
 description              : &description "Andy's professional, academic, and general page"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -27,10 +27,11 @@ author:
   name             : "Andy Y"
   pronouns         : "he/him/his" # example: "she/her"  
   bio              : "Student of Statistical Sciences and the World"
-  location         : "Toronto, Ontario, Canada"
+  location         : "Toronto, ON, CA"
   employer         : "TD Securities"
   uri              : # URL
   email            : "ayuan45@uwo.ca"
+  country          : "CA"
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
