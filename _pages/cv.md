@@ -14,7 +14,7 @@ Education
 * BMOS in Applied Statistics and Accounting, Western University, 2025
   * 2x Western Gold Medal (Highest graduating average in major)
 
-Work experience
+Work Experience
 ======
 * Product Control Analyst - TD Securities
   * 2025 - Present, Fixed Income IPV & Data Analytics
