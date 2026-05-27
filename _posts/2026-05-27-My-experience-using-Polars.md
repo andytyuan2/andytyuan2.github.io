@@ -7,7 +7,7 @@ tags:
   - finance
 ---
 
-images: ![Polars Icon](/images/polars_logo_icon_248809.png)
+![Polars Icon](/images/polars_logo_icon_248809.png)
 
 I was first exposed to `Polars` in my undergraduate data science class. My professor was a Canada Research Chair, so to him and the systems he built, speed was truly of the essence. Coming from a statistics and finance background, I understood how frustrating the wait for my `R` code or Excel VBA macro could be, but I was under the impression `Pandas` could solve all of that. `Pandas`, to put it bluntly, is written as the brainchild of a linear algebra expert, an amateur computer scientist, and a desperate analyst. Works and works well for its purpose, yet a bit clunky and difficult to dissect. 
 
