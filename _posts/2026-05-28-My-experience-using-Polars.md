@@ -1,6 +1,6 @@
 ---
 title: 'My experience using Polars'
-date: 2026-05-27
+date: 2026-05-28
 permalink: /posts/2026/05/polars-experience/
 tags:
   - professional
@@ -29,8 +29,8 @@ df.rename({"price":"notional"})
 df = (df
 .with_columns(pl.when(pl.col("price") > 1)
                 .then(pl.col("mean_volume"))
-.otherwise(pl.col("volume"))
-.alias("volume"))
+                .otherwise(pl.col("volume"))
+                .alias("volume"))
 .select(pl.col("price").alias("notional"), "volume", "trader"))
 ```
 
@@ -40,3 +40,4 @@ Real life data is messy, unforgiving, and undeniably a pain to work through. Thi
 
 Finally, the lazy evaluation. I believe this is truly the magnum opus of `Polars`. The way I like to describe it to my curious coworkers is as follows: `Pandas` watches a cooking video like so, it receives an instruction, pauses the video, follows the instruction, drops what they are doing, then goes back to unpause the video and listen to the next step. That is like going to the store a separate time for each item on the ingredients list. Slow, clunky, awkward. `Polars` will instead watch the entire video and create a mental model of what to do, then execute when it decides it wants to cook. It is even capable of pushing instructions, like selecting a subset of columns earlier, if it can save time loading data. 
 
+For the technically advanced, `Polars` is a bridge from Pandas to Apache Spark. For when your data is in the hundreds of thousands rather than the hundreds of millions. For my team, it is the perfect way for everyone to get in on the coding experience. 
