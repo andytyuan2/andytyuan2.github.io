@@ -34,7 +34,7 @@ df = (df
 .select(pl.col("price").alias("notional"), "volume", "trader"))
 ```
 
-Notice the syntax, an untrained eye completely unfamiliar with Polars or Pandas can follow the clear wording in Polars, but may struggle with why some lines are written differently in Pandas. Fundamentally, Polars encourages clear notation using an expression-based approach. It reads like spoken language on purpose. 
+Notice the syntax, an untrained eye completely unfamiliar with `Polars` or `Pandas` can follow the clear wording in `Polars`, but may struggle with why some lines are written differently in `Pandas`. Fundamentally, `Polars` encourages clear notation using an expression-based approach. It reads like spoken language on purpose. 
 
 Real life data is messy, unforgiving, and undeniably a pain to work through. This makes a strict data type per column extremely valuable. `Pandas` tries to run away from complexity by allowing different data to mix and mingle under an "object" column type, but `Polars` tackles it head on. `Polars` keeps your data consistent by enforcing strict data types and refusing to believe a string like "123" could possibly be the same as a numeric `123`. This creates a structure which standardizes all downstream processing, whether that continues to be in python or outsourced to Power BI and Excel. 
 
@@ -43,3 +43,5 @@ Finally, the lazy evaluation. I believe this is truly the magnum opus of `Polars
 For the technically advanced, `Polars` is a bridge from `Pandas` to `Apache Spark`. For when your data is in the hundreds of thousands rather than the hundreds of millions. For my team, it is the perfect way for everyone to get in on the coding experience. I encourage all teams using Python and `Pandas` to start using `Polars`. It still has some catching up to do on applications like geostatistical modelling and some advanced functions, but the more users start to use it, the better it will become. 
 
 ![Polar bear > pandas](/images/polar_bear_panda.jpeg)
+
+^ Bigger and better :)
