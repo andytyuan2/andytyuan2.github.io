@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'Toronto Airbnb Spatial Point Pattern Exploratory Analysis'
 date: 2026-06-13
 permalink: /posts/2026/06/point-pattern-analysis/
 tags:
