@@ -15,6 +15,7 @@ tags:
   - the tests we use, formulas for the tests
 - 
 
+## Introduction to Spatial Point Patterns
 
 Spatial data is unlike the data you would come across in finance and most other statistical analysis. The level of autocorrelation is far greater than whatever a "standard" level is, which follows a fundamental law of geography stated by Waldo Tobler in 1970: "*Everything is related to everything else, but near things are more related than distant things.*" Keeping this in mind, any modelling on spatial data cannot follow standard procedure of assuming observations are identically and independently distributed (IID). This creates some complications which I will not delve into here, but likely in a later writing.
 
@@ -30,6 +31,29 @@ Focusing on the room_type variable, below is the point pattern data for Toronto 
 
 ![Exploring Room Type](/images/cartodb_rooms_to.png)
 
-Just from the above map, we see how there are more listings in the downtown and midtown cores as there is quite a bit of overlap. Towards the edges of the city, listings are already dispersing. This isn't enough, we need to look at the data from a statistical standpoint and really show that it is behaving a certain way. To better illustrate how listings may be acting certain ways across the city, we can form a histogram along both axes.
+Just from the above map, we see how there are more listings in the downtown and midtown cores as there is quite a bit of overlap. Towards the edges of the city, listings are already dispersing. 
+
+## Visualization
+
+The above explanation isn't enough, we need to look at the data from a statistical standpoint and really show that it is behaving a certain way. To better illustrate how listings may be acting certain ways across the city, we can form a histogram along both axes.
 
 ![Histogram x and y](/images/scatter_listings.png)
+
+Our previous observations were confirmed. There is a higher concentration of listings in the downtown / midtown area compared to the edges of the city. However, there is a slightly higher concentration in the north end compared to the east and west ends. 
+
+The histograms are great for evaluating overall trends, but it is difficult to pinpoint where density truly lies as you must line up the histograms perfectly. Instead, we can have it on the map itself using hexagonal binning. In this case, we are interested in the number of instances which fall into the hexagonal bins we overlay onto the map. There is a better sense of how listings fall around the city.
+
+![Hex Binning](/images/hex_airbnb.png)
+
+Again, we see how listings are concentrated in the downtown core, but there are bins that are dark in the north end as well. As best practice, I won't speculate further on why there are so many listings, I will take the data at face value. 
+
+## Centrography
+
+Rather than looking at the data in its raw form, we can create summary statistics such as mean, median, and weighted mean. These can be further subset by the variable type, such as listing type.
+
+![Listing means](/images/listing_type_means.png)
+
+The mean of the private rooms appears to be centralized in midtown, but the dispersion ellipse is also far bigger. This suggests there are plenty of private room listings in the Toronto region. Meanwhile, the mean of the entire home/apt listings is further south, with a dispersion ellipse smaller, which suggests more concentration in the downtown area. Based on housing trends in the city, this makes sense. There are more homes with entirely separable private rooms not in the downtown core, yet listings in the core would likely get more bookings. Meanwhile, an entire home / apt would likely mean a few rooms at most in a high-rise, which are solidly within the downtown area. Full houses have the flexibility to provide a single room while an apartment can only be entirely rented out. 
+
+## Clustering 
+
