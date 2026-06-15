@@ -58,3 +58,6 @@ The mean of the private rooms appears to be centralized in midtown, but the disp
 ## Clustering 
 
 In this section, we can identify cluster patterns using Ripley's G-test, Quadrat statistic, and Ripley's F-test.
+
+![Ripley's G-test](/images/g_test_airbnb.png)
+
