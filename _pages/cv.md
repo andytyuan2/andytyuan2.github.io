@@ -48,6 +48,7 @@ Technical Skills
   * Machine Learning: xgboost, randomForest
 * Git
 * PowerBI, Tableau, Excel (VBA, Power Query)
+* SQL
 
 Languages
 ======
