@@ -13,27 +13,29 @@ Education
 ======
 * BMOS in Applied Statistics and Accounting, Western University, 2025
   * 2x Western Gold Medal (Highest graduating average in major)
+* Non-degree Coursework, University of Toronto, 2025
+  * Calculus-based probability, Mathematical Statistics
 
 Work Experience
 ======
 * Product Control Analyst - TD Securities
   * 2025 - Present, Fixed Income IPV & Data Analytics
-  * Achieved 70% runtime reduction on a scalable ETL pipeline using Polars’ lazy evaluation and parallelization on columnar fixed income trading data, enabling 3x faster delivery of structured reports for 6 control analysts and over 50 trading desks.
-  * Built an automated data ingestion and anomaly detection system for 5 distinct policies, eliminating manual errors and delivering reports up to 50% faster; shipped reusable template modules for analyst self-service automation.
-  * Led end-to-end migration from legacy Oracle Hyperion system to a modern Databricks data lakehouse, reducing query turnaround by 10x and surfacing previously inaccessible data into Power BI for desk-level analysis.
-  * Championed Python upskilling across the product control function, delivering internal training on dataframes, machine learning, Excel integration, and pipeline development, directly expanding the department’s quantitative capabilities.
+  * Initiated and independently completed a core ETL pipeline rewrite leveraging lazy evaluation and parallelization in Polars to reduce runtime by 75% (from 16 to 3 minutes), which eliminated bottlenecks for downstream reporting across 50+ trading desks.
+  * Rebuilt front-office trader relationships by delivering monthly data-driven PnL results; analysed and explained product marking and market impact on a per trade basis to create substantial value and authority as a trusted control function.
+  * Championed data engineering and governance best practices by delivering technical workshops on data manipulation, Excel integration, machine learning, and data pipeline development to the product control and finance departments. 
+  * Created 8 tools in Python to automate PnL data analysis, empowering a non-technical team to execute advanced workflows.
+  * Developed custom Python scripts using Polars and xlwings to automate 6 PnL reporting processes, saved 10+ hours per month.
   * Supervisor: Ray Guo
 
 * Market Risk Summer Associate - TD Securities (Toronto-Dominion Bank)
   * Summer 2024, Funding & Liquidity
-  * Increased accuracy of PnL, risk, and liquidity benchmarks by 15% by developing a Tableau dashboard which highlighted trade-level data anomalies, enabling correction of 100+ errors before posting.
-  * Optimized risk threshold calibration across 30+ risk models, aligning breach frequency with expected VaR confidence levels by conducting financial time series analysis and statistical modeling in Tableau and Python. 
+  * Increased accuracy of PnL, risk, and liquidity benchmarks by 15% by developing a Tableau dashboard which highlighted trade-level data anomalies and correction of 100+ errors before posting to the general ledger and internal PnL system.
+  * Optimized risk threshold calibration across 30+ risk models, aligning breach frequency with expected VaR confidence levels by conducting financial time series analysis and predictive modeling of market indices in Tableau and Python. 
   * Supervisor: Andy Wong
 
 * Advisor Channel Sales Analyst - RBC Global Asset Management (Royal Bank of Canada)
   * Fall/Winter 2023/24, Sales Technology and Analytics
-  * Delivered daily portfolio and client insights 1 hour earlier, equipping teams with the right data to improve sales functions by using SQL and VBA to streamline 5 data workflows producing exploratory reports for asset flow and distribution analysis.
-  * Architected a data pipeline algorithm to automate regional assignments for over 30,000 private wealth clients, eliminating manual processing and reducing reporting needs by 90%, saving over 200 hours annually.
+  * Architected an optimization pipeline to segment and route 30,000+ private wealth clients based on geographical and financial attributes. This saved 200+ hours annually and provisioned sales teams with relevant clients and sales opportunities faster.
   * Facilitated 100+ new sales relationships by assigning over $100 million of assets to wealth advisors in fund flow reconciliation.
   * Supervisor: Vaibhav Karandikar
   
