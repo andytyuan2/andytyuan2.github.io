@@ -57,17 +57,7 @@ The mean of the private rooms appears to be centralized in midtown, but the disp
 
 ## Clustering 
 
-In this section, we can identify cluster patterns using Ripley's G-test and the Quadrat statistic.
-
-**Ripley's G-test:**
-
-$$G(r) = \frac{1}{N} \sum^{N}_{i=1} I(d_i \leq r)$$
-
-$$G_{0}(r) = 1 - e^{-\lambda \pi r^2}$$
-
-![Ripley's G-test](/images/g_test_airbnb.png)
-
-In this plot, we can see that the observed line above the median simulation suggests there is a far greater ratio of near neighbours than expected. Visually, this means points tend to cluster throughout the population. Relating back to the plot of points, this is especially true for the downtown core, but it is interesting to see it play out across the rest of the city too.
+In this section, we can identify cluster patterns using the Quadrat statistic and Ripley's G-test.
 
 **Quadrat Statistic:**
 
@@ -79,4 +69,22 @@ Using the chi-squared test for this data, we arrived at a chi-squared value of 1
 
 ![Quadrat Statistic](/images/quadrat.png)
 
-Trying to pin a specific distribution to the point process is beyond the scope of this analysis, but I am interested in seeing how it could be modelled with so many covariates being highly correlated with one another. 
+There is a caveat to the quadrat statistic, that being there are subsections with no values because it is out of the range of the plotted area. This makes our result skewed, so for our next test, we create a concave hull to contain our data AND test. 
+
+**Ripley's G-test:**
+
+We first create a concave hull below. 
+
+![Concave hull](/images/concave hull abnb.png)
+
+$$G(r) = \frac{1}{N} \sum^{N}_{i=1} I(d_i \leq r)$$
+
+$$G_{0}(r) = 1 - e^{-\lambda \pi r^2}$$
+
+Ripley's G-test compares the median ratio of nearest neighbours with distances shorter than some predetermined distance variable to the actual ratio of nearest neighbours within that distance. For example, the median simulated ratio of nearest neighbours within 50 meters may be 0.2. This serves as our null hypothesis/benchmark. Depending on the number of points in the sample/population, a sufficiently high ratio would be needed to reject the null hypothesis. Typically, a sufficiently high ratio within a relatively short distance suggests that clustering is present and the population / points are not homogenous. In the below plot, we simulate the median using monte-carlo.
+
+![Ripley's G-test](/images/g_test_airbnb.png)
+
+In this plot, we can see that the observed line above the median simulation suggests there is a far greater ratio of near neighbours than expected. Visually, this means points tend to cluster throughout the population. Relating back to the plot of points, this is especially true for the downtown core, but it is interesting to see it play out across the rest of the city too.
+
+Trying to pin a specific distribution to the point process is beyond the scope of this analysis, but I am interested in seeing how it could be modelled with so many covariates being highly correlated with one another. What's next? I hope to look into more types of spatial data like areal or geostatistical, but those will be in a future post. The analysis of 
