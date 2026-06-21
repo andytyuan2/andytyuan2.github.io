@@ -57,7 +57,7 @@ In this section, we identify cluster patterns using the Quadrat statistic and Ri
 
 $$\chi^2 = \sum_{i=1}^{m} \sum_{j=1}^{k} \frac{[x_{i,j} - E(x_{i,j})]^2}{\lambda |A_{i,j}|}$$
 
-The quadrat statistic compares complete spatial randomness to the actual point process in the data. As the benchmark/null process, we would expect complete spatial randomness to have a uniform number of points per equally sized subsection of the map. Whether that be a grid, hexagon, or other shape is up to the data and researcher. The quadrat statistic is the most intuitive to someone new in analysing clustering, since we can see how much a grid space is taken up by points.
+The quadrat statistic compares complete spatial randomness to the actual point process in the data. As the benchmark/null process, we would expect complete spatial randomness to have a uniform number of points per equally sized subsection of the map. Whether that be a grid, hexagon, or other shape is up to the data and researcher. The quadrat statistic is the most intuitive to someone new to cluster analysis since we can see how much of a grid space is taken up by points.
 
 Using the chi-squared test for this data, we arrived at a chi-squared value of 127082.646, and a p-value of the test at 0. For a practically all significance levels, this result rejects the null hypothesis. We can assert the plot is NOT completely spatially random. Below is a plot showing such case:
 
