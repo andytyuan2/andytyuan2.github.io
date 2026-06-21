@@ -9,7 +9,7 @@ tags:
 
 # Introduction to Spatial Point Patterns
 
-Spatial data is unlike the data you would come across in finance and most other statistical analysis. The level of autocorrelation is far greater than whatever a "standard" level is, which follows a fundamental law of geography stated by Waldo Tobler in 1970: "*Everything is related to everything else, but near things are more related than distant things.*" Keeping this in mind, any modelling on spatial data cannot follow standard procedure of assuming observations are identically and independently distributed (IID). This creates some complications which I will not delve into here, but likely in a later writing.
+Spatial data is unlike the data you would come across in finance and most other statistical analysis. The level of autocorrelation is far greater than whatever a "standard" level is, which follows a fundamental law of geography stated by Waldo Tobler in 1970: "*Everything is related to everything else, but near things are more related than distant things.*" Keeping this in mind, any modelling on spatial data cannot follow standard procedure of assuming observations are identically and independently distributed (IID). Although no modelling is done in this write up, think about why the point pattern behaves as it does.
 
 For my first venture into spatial data, I am choosing to focus on point pattern data, where the location of the data is the primary interest. The following exploratory analysis focuses on Airbnb data in Toronto from January 16th, 2026. The data came from this site: [Airbnb Data](https://insideairbnb.com/get-the-data/)
 
