@@ -43,7 +43,7 @@ Again, we see listings are concentrated in the downtown core, but there are bins
 
 # Centrography
 
-Rather than looking at the data in its raw form, we can create summary statistics such as mean, median, and weighted mean. These can be further subset by variable type, such as the categorical variable: `listing_type`.
+Rather than looking at the data in its raw form, we can create summary statistics such as mean, median, and weighted mean. These can be further subset by variable type, such as the categorical variable: `room_type`.
 
 ![Listing means](/images/listing_type_means.png)
 
