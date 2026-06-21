@@ -7,7 +7,7 @@ tags:
   - academic
 ---
 
-## Introduction to Spatial Point Patterns
+# Introduction to Spatial Point Patterns
 
 Spatial data is unlike the data you would come across in finance and most other statistical analysis. The level of autocorrelation is far greater than whatever a "standard" level is, which follows a fundamental law of geography stated by Waldo Tobler in 1970: "*Everything is related to everything else, but near things are more related than distant things.*" Keeping this in mind, any modelling on spatial data cannot follow standard procedure of assuming observations are identically and independently distributed (IID). This creates some complications which I will not delve into here, but likely in a later writing.
 
@@ -25,7 +25,7 @@ Focusing on the `room_type` variable, below is the plotted point pattern data fo
 
 Just from the above map, we see how listings in the downtown and midtown tend to overlap and ....cluster?! Towards the edges of the city, listings quickly disperse.
 
-## Visualization
+# Visualization
 
 Of course, it is difficult to say anything about the data from a visual inspection. A short spatial analysis will bring to light specific trends and patterns we can further digest.
 
@@ -41,7 +41,7 @@ The histograms are great for evaluating overall trends, but it is difficult to p
 
 Again, we see listings are concentrated in the downtown core, but there are bins that are dark in the north end as well. 
 
-## Centrography
+# Centrography
 
 Rather than looking at the data in its raw form, we can create summary statistics such as mean, median, and weighted mean. These can be further subset by variable type, such as the categorical variable: `listing_type`.
 
@@ -49,7 +49,7 @@ Rather than looking at the data in its raw form, we can create summary statistic
 
 The mean of `Private Room` appears to be centralized in midtown, but the dispersion ellipse is also far bigger. This suggests there are plenty of private room listings in the Toronto region, while most points are in midtown and downtown. Meanwhile, the mean of the `Entire Home/apt` listing type is further south with a smaller dispersion ellipse, which suggests higher concentration in the downtown area. We can infer there are more homes with entirely separable private rooms outside the downtown core while whole apartments are being rented within the downtown core. Full houses have the flexibility to provide a single room while an apartment can only be rented out in its entirety. 
 
-## Clustering 
+# Clustering 
 
 In this section, we identify cluster patterns using the Quadrat statistic and Ripley's G-test. Can you guess the results of these tests?
 
