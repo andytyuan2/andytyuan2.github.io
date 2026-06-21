@@ -75,7 +75,7 @@ There is a caveat to the quadrat statistic, that being there are subsections wit
 
 We first create a concave hull below. 
 
-![Concave hull](/images/concave hull abnb.png)
+![Concave hull](/images/concave_hull_abnb.png)
 
 $$G(r) = \frac{1}{N} \sum^{N}_{i=1} I(d_i \leq r)$$
 
