@@ -63,19 +63,21 @@ In this section, we can identify cluster patterns using the Quadrat statistic an
 
 $$\chi^2 = \sum_{i=1}^{m} \sum_{j=1}^{k} \frac{[x_{i,j} - E(x_{i,j})]^2}{\lambda |A_{i,j}|}$$
 
-The quadrat statistic compares complete spatial randomness to the actual point process in the data. As the benchmark/null process, we would expect complete spatial randomness to have a uniform number of points per equally sized subsection of the map. Whether that be a grid, hexagon, or other shape is up to the data and researcher. 
+The quadrat statistic compares complete spatial randomness to the actual point process in the data. As the benchmark/null process, we would expect complete spatial randomness to have a uniform number of points per equally sized subsection of the map. Whether that be a grid, hexagon, or other shape is up to the data and researcher. The quadrat statistic is the most intuitive to someone new in analysing clustering, since we can see how much a grid space is taken up by points.
 
 Using the chi-squared test for this data, we arrived at a chi-squared value of 127082.646, and a p-value of the test at 0. For a practically all significance levels, this result rejects the null hypothesis. We can assert the plot is NOT completely spatially random. Below is a plot showing such case:
 
 ![Quadrat Statistic](/images/quadrat.png)
 
-There is a caveat to the quadrat statistic, that being there are subsections with no values because it is out of the range of the plotted area. This makes our result skewed, so for our next test, we create a concave hull to contain our data AND test. 
+There is a caveat to the quadrat statistic, that being there are subsections with no values because it is out of the range of the plotted area. This makes our result skewed, so for our next test, we create a concave hull in our next test to contain our data AND test. 
 
 **Ripley's G-test:**
 
 We first create a concave hull below. 
 
 ![Concave hull](/images/concave_hull_abnb.png)
+
+Now that we have contained our data and the area on which our test can actually be conducted, we are ready to start Ripley's G-test.
 
 $$G(r) = \frac{1}{N} \sum^{N}_{i=1} I(d_i \leq r)$$
 
