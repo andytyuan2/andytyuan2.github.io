@@ -59,10 +59,16 @@ The mean of the private rooms appears to be centralized in midtown, but the disp
 
 In this section, we can identify cluster patterns using Ripley's G-test and the Quadrat statistic.
 
-Ripley's G-test:
+**Ripley's G-test:**
 
 $$G(r) = \frac{1}{N} \sum^{N}_{i=1} I(d_i \leq r)$$
 
 $$G_{0}(r) = 1 - e^{-\lambda \pi r^2}$$
 
 ![Ripley's G-test](/images/g_test_airbnb.png)
+
+In this plot, we can see that the observed line above the median simulation suggests there is a far greater ratio of near neighbours than expected. Visually, this means points tend to cluster throughout the population. Relating back to the plot of points, this is especially true for the downtown core, but it is interesting to see it play out across the rest of the city too.
+
+**Quadrat Statistic:**
+
+$$\chi^2 = \sum_{i=1}^{m} \sum_{j=1}^{k} \frac{[x_{i,j} - E(x_{i,j})]^2}{\lambda |A_{i,j}|}$$
