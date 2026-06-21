@@ -33,9 +33,9 @@ In addition to plotting the points, a histogram along both axes will better illu
 
 ![Histogram x and y](/images/scatter_listings.png)
 
-There is a higher concentration of listings in the downtown / midtown area compared to the edges of the city. However, there is a slightly higher concentration in the north end compared to the east and west ends. 
+There is a high concentration of listings in the downtown / midtown area compared to the edges of the city. Along the edges, the north end has the highest density compared to the east and west ends. 
 
-The histograms are great for evaluating overall trends, but it is difficult to pinpoint where density truly lies as you must line up the histograms perfectly. Instead, we can view density with hexagonal binning. We map a hexagon onto the map and count the number of points which fall into one hexagon. 
+These histograms are great for evaluating overall trends, but it is difficult to pinpoint where density truly lies as you must line up the histograms perfectly. Instead, we can view density with hexagonal binning. We map a hexagon onto the map and count the number of points which fall into one hexagon. 
 
 ![Hex Binning](/images/hex_airbnb.png)
 
