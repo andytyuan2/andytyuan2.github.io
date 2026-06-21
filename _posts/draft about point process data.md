@@ -7,14 +7,6 @@ tags:
   - academic
 ---
 
-- intro to point pattern data and spatial data
-- intro to toronto airbnb data
-- what we expect to find from the data based on the variables
-- testing for clusters
-  - hypothesis testing
-  - the tests we use, formulas for the tests
-- 
-
 ## Introduction to Spatial Point Patterns
 
 Spatial data is unlike the data you would come across in finance and most other statistical analysis. The level of autocorrelation is far greater than whatever a "standard" level is, which follows a fundamental law of geography stated by Waldo Tobler in 1970: "*Everything is related to everything else, but near things are more related than distant things.*" Keeping this in mind, any modelling on spatial data cannot follow standard procedure of assuming observations are identically and independently distributed (IID). This creates some complications which I will not delve into here, but likely in a later writing.
@@ -73,11 +65,11 @@ There is a caveat to the quadrat statistic, that being there are subsections wit
 
 **Ripley's G-test:**
 
-We first create a concave hull below. 
+We create a concave hull below. 
 
 ![Concave hull](/images/concave_hull_abnb.png)
 
-Now that we have contained our data and the area on which our test can actually be conducted, we are ready to start Ripley's G-test.
+Now that we have contained our data and the area on which our test can actually be conducted, we are ready to analyze our data using Ripley's G-test.
 
 $$G(r) = \frac{1}{N} \sum^{N}_{i=1} I(d_i \leq r)$$
 
@@ -87,6 +79,6 @@ Ripley's G-test compares the median ratio of nearest neighbours with distances s
 
 ![Ripley's G-test](/images/g_test_airbnb.png)
 
-In this plot, we can see that the observed line above the median simulation suggests there is a far greater ratio of near neighbours than expected. Visually, this means points tend to cluster throughout the population. Relating back to the plot of points, this is especially true for the downtown core, but it is interesting to see it play out across the rest of the city too.
+In this plot, we can see that the observed line above the median simulation suggests there is a far greater ratio of near neighbours than expected. Visually, this means points tend to cluster throughout the point process. Looking back on the plot of points and our quadrat statistic plot, this is especially true for the downtown core, but it is interesting to see it play out across the rest of the city too.
 
-Trying to pin a specific distribution to the point process is beyond the scope of this analysis, but I am interested in seeing how it could be modelled with so many covariates being highly correlated with one another. What's next? I hope to look into more types of spatial data like areal or geostatistical, but those will be in a future post. The analysis of 
+Trying to pin a specific distribution to the point process is beyond the scope of this analysis, but I am interested in seeing how it could be modelled with so many covariates being highly correlated with one another. What's next? I hope to look into more types of spatial data like areal or geostatistical, but those will be in a future post. 
