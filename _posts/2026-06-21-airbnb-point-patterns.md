@@ -1,7 +1,7 @@
 ---
 title: 'Toronto Airbnb Spatial Point Pattern Exploratory Analysis'
 date: 2026-06-21
-permalink: /posts/2026/06/point-pattern-analysis/
+permalink: /posts/2026/06/airbnb-point-pattern/
 tags:
   - statistics
   - academic
