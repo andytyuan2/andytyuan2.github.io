@@ -19,37 +19,39 @@ After downloading and cleaning the data, we set the CRS (Coordinate Reference Sy
 torair = torair.to_crs("EPSG:3348")
 ```
 
-Focusing on the room_type variable, below is the plotted point pattern data for Toronto Airbnb listings.
+Focusing on the `room_type` variable, below is the plotted point pattern data for Toronto Airbnb listings.
 
 ![Exploring Room Type](/images/cartodb_rooms_to.png)
 
-Just from the above map, we see how there are more listings in the downtown and midtown cores as there is quite a bit of overlap. Towards the edges of the city, listings are already dispersing. 
+Just from the above map, we see how listings in the downtown and midtown tend to overlap and ....cluster?! Towards the edges of the city, listings quickly disperse.
 
 ## Visualization
 
-The above explanation isn't enough, we need to look at the data from a statistical standpoint and really show that it is behaving a certain way. To better illustrate how listings may be acting certain ways across the city, we can form a histogram along both axes.
+Of course, it is difficult to say anything about the data from a visual inspection. A short spatial analysis will bring to light specific trends and patterns we can further digest.
+
+In addition to plotting the points, a histogram along both axes will better illustrate how the data is distributed.
 
 ![Histogram x and y](/images/scatter_listings.png)
 
-Our previous observations were confirmed. There is a higher concentration of listings in the downtown / midtown area compared to the edges of the city. However, there is a slightly higher concentration in the north end compared to the east and west ends. 
+There is a higher concentration of listings in the downtown / midtown area compared to the edges of the city. However, there is a slightly higher concentration in the north end compared to the east and west ends. 
 
-The histograms are great for evaluating overall trends, but it is difficult to pinpoint where density truly lies as you must line up the histograms perfectly. Instead, we can have it on the map itself using hexagonal binning. In this case, we are interested in the number of instances which fall into the hexagonal bins we overlay onto the map. There is a better sense of how listings fall around the city.
+The histograms are great for evaluating overall trends, but it is difficult to pinpoint where density truly lies as you must line up the histograms perfectly. Instead, we can view density with hexagonal binning. We map a hexagon onto the map and count the number of points which fall into one hexagon. 
 
 ![Hex Binning](/images/hex_airbnb.png)
 
-Again, we see how listings are concentrated in the downtown core, but there are bins that are dark in the north end as well. As best practice, I won't speculate further on why there are so many listings, I will take the data at face value. 
+Again, we see listings are concentrated in the downtown core, but there are bins that are dark in the north end as well. 
 
 ## Centrography
 
-Rather than looking at the data in its raw form, we can create summary statistics such as mean, median, and weighted mean. These can be further subset by the variable type, such as listing type.
+Rather than looking at the data in its raw form, we can create summary statistics such as mean, median, and weighted mean. These can be further subset by variable type, such as the categorical variable: `listing_type`.
 
 ![Listing means](/images/listing_type_means.png)
 
-The mean of the private rooms appears to be centralized in midtown, but the dispersion ellipse is also far bigger. This suggests there are plenty of private room listings in the Toronto region. Meanwhile, the mean of the entire home/apt listings is further south, with a dispersion ellipse smaller, which suggests more concentration in the downtown area. Based on housing trends in the city, this makes sense. There are more homes with entirely separable private rooms not in the downtown core, yet listings in the core would likely get more bookings. Meanwhile, an entire home / apt would likely mean a few rooms at most in a high-rise, which are solidly within the downtown area. Full houses have the flexibility to provide a single room while an apartment can only be entirely rented out. 
+The mean of `Private Room` appears to be centralized in midtown, but the dispersion ellipse is also far bigger. This suggests there are plenty of private room listings in the Toronto region, while most points are in midtown and downtown. Meanwhile, the mean of the `Entire Home/apt` listing type is further south with a smaller dispersion ellipse, which suggests higher concentration in the downtown area. We can infer there are more homes with entirely separable private rooms outside the downtown core while whole apartments are being rented within the downtown core. Full houses have the flexibility to provide a single room while an apartment can only be rented out in its entirety. 
 
 ## Clustering 
 
-In this section, we can identify cluster patterns using the Quadrat statistic and Ripley's G-test.
+In this section, we identify cluster patterns using the Quadrat statistic and Ripley's G-test. Can you guess the results of these tests?
 
 **Quadrat Statistic:**
 
@@ -61,7 +63,7 @@ Using the chi-squared test for this data, we arrived at a chi-squared value of 1
 
 ![Quadrat Statistic](/images/quadrat.png)
 
-There is a caveat to the quadrat statistic, that being there are subsections with no values because it is out of the range of the plotted area. This makes our result skewed, so for our next test, we create a concave hull in our next test to contain our data AND test. 
+There is a caveat to the quadrat statistic. There are subsections with no values because it is out of the range of the plotted area. This skews our result, so for our next test, we create a concave hull in our next test to contain our data AND test. 
 
 **Ripley's G-test:**
 
@@ -75,7 +77,7 @@ $$G(r) = \frac{1}{N} \sum^{N}_{i=1} I(d_i \leq r)$$
 
 $$G_{0}(r) = 1 - e^{-\lambda \pi r^2}$$
 
-Ripley's G-test compares the median ratio of nearest neighbours with distances shorter than some predetermined distance variable to the actual ratio of nearest neighbours within that distance. For example, the median simulated ratio of nearest neighbours within 50 meters may be 0.2. This serves as our null hypothesis/benchmark. Depending on the number of points in the sample/population, a sufficiently high ratio would be needed to reject the null hypothesis. Typically, a sufficiently high ratio within a relatively short distance suggests that clustering is present and the population / points are not homogenous. In the below plot, we simulate the median using monte-carlo.
+Ripley's G-test compares the median ratio of nearest neighbours with distances shorter than some predetermined distance variable to the actual ratio of nearest neighbours within that distance. For example, the median simulated ratio of nearest neighbours within 50 meters may be 0.2. This serves as our null hypothesis/benchmark. Depending on the number of points in the sample/population, a sufficiently high ratio would be needed to reject the null hypothesis. Typically, a sufficiently high ratio within a relatively short distance suggests clustering is present and the population / points are not homogenous. In the below plot, we simulate the median using monte-carlo.
 
 ![Ripley's G-test](/images/g_test_airbnb.png)
 
