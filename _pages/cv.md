@@ -9,35 +9,33 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* BMOS in Applied Statistics and Accounting, Western University, 2025
-  * 2x Western Gold Medal (Highest graduating average in major)
-* Non-degree Coursework, University of Toronto, 2025
-  * Calculus-based probability, Mathematical Statistics
-
 Work Experience
 ======
-* Product Control Analyst - TD Securities
-  * 2025 - Present, Fixed Income IPV & Data Analytics
-  * Initiated and independently completed a core ETL pipeline rewrite leveraging lazy evaluation and parallelization in Polars to reduce runtime by 75% (from 16 to 3 minutes), which eliminated bottlenecks for downstream reporting across 50+ trading desks.
-  * Rebuilt front-office trader relationships by delivering monthly data-driven PnL results; analysed and explained product marking and market impact on a per trade basis to create substantial value and authority as a trusted control function.
-  * Championed data engineering and governance best practices by delivering technical workshops on data manipulation, Excel integration, machine learning, and data pipeline development to the product control and finance departments. 
-  * Created 8 tools in Python to automate PnL data analysis, empowering a non-technical team to execute advanced workflows.
-  * Developed custom Python scripts using Polars and xlwings to automate 6 PnL reporting processes, saved 10+ hours per month.
+* **Product Control Analyst @ TD Securities** | 09/2025 - Present
+  * Independently reformatted a core Python ETL pipeline to leverage Polars’ lazy evaluation, parallelization, and columnar data formatting. Eliminated data bottlenecks for 50+ trading desks and reduced compute runtime by 75% (from 16 to 3 minutes).
+  * Rebuilt front-office trader relationships by delivering monthly data-driven PnL results; analysed and explained product marking and market impact on a per trade level to create substantial value and authority as a trusted control function.
+  * Taught 5 technical workshops to the product control and finance departments which focused on best practices in data governance, data manipulation, machine learning, Excel integration, and pipeline development in a regulated environment.
+  * Created 8 general PnL analysis tools in Python to empower a non-technical team to execute advanced workflows.
+  * Automated 6 PnL reporting processes through custom Python scripts, leveraging Polars and xlwings to save 10+ hours a month.
   * Supervisor: Ray Guo
 
-* Market Risk Summer Associate - TD Securities (Toronto-Dominion Bank)
-  * Summer 2024, Funding & Liquidity
-  * Increased accuracy of PnL, risk, and liquidity benchmarks by 15% by developing a Tableau dashboard which highlighted trade-level data anomalies and correction of 100+ errors before posting to the general ledger and internal PnL system.
-  * Optimized risk threshold calibration across 30+ risk models, aligning breach frequency with expected VaR confidence levels by conducting financial time series analysis and predictive modeling of market indices in Tableau and Python. 
+* **Market Risk Summer Associate @ TD Securities** | 05/2024 - 08/2024
+  * Optimized 30+ risk models’ risk threshold calibrations, aligned breach frequency with expected VaR confidence levels after conducting historical time series analysis and predictive modeling of market indices in Tableau and Python. 
+  * Rectified 100+ data anomalies per month using a custom Tableau dashboard to highlight trade-level errors before posting to the general ledger and internal accounting system. PnL, risk, and liquidity benchmark accuracy improved by 15% YoY.
   * Supervisor: Andy Wong
 
-* Advisor Channel Sales Analyst - RBC Global Asset Management (Royal Bank of Canada)
-  * Fall/Winter 2023/24, Sales Technology and Analytics
-  * Architected an optimization pipeline to segment and route 30,000+ private wealth clients based on geographical and financial attributes. This saved 200+ hours annually and provisioned sales teams with relevant clients and sales opportunities faster.
+* **Advisor Channel Sales Analyst @ RBC Global Asset Management** | 08/2023 - 05/2024
+  * Provisioned sales teams with 5% more relevant clients and sales opportunities faster by architecting an optimization pipeline to segment and route 30,000+ private wealth clients based on geographical and financial attributes. Saved 200+ hours annually.
   * Facilitated 100+ new sales relationships by assigning over $100 million of assets to wealth advisors in fund flow reconciliation.
   * Supervisor: Vaibhav Karandikar
+ 
+Education
+======
+* **BMOS in Applied Statistics and Accounting, Western University, 2025**
+  * 2x Western Gold Medal (Highest graduating average in major)
+  * **Coursework**: Machine Learning, Generalized Linear Models, Financial Markets, Study Design, Predicate Logic
+* **Non-Degree Continuing Education, University of Toronto, 2025**
+  * **Coursework**: Calculus-based Probability, Mathematical Statistics
   
 Technical Skills
 ======
@@ -56,13 +54,3 @@ Languages
 * Intermediate Mandarin Chinese
 * Elementary Japanese
 * Elementary German
-  
-Service and leadership
-======
-* Club Executive - Western Tea Club
-  * 2020 - 2025
-  * Brainstorming and execution for the club's primary events which had over 50 attendees each.
-
-* President / Vice President - Western Foodies Club
-  * 2021 - 2023
-  * Sales and relationship manager for the club's external partnerships with local restaurants and food suppliers.
