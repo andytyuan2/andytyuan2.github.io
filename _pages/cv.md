@@ -15,8 +15,7 @@ Work Experience
   * Independently reformatted a core Python ETL pipeline to leverage Polars’ lazy evaluation, parallelization, and columnar data formatting. Eliminated data bottlenecks for 50+ trading desks and reduced compute runtime by 75% (from 16 to 3 minutes).
   * Rebuilt front-office trader relationships by delivering monthly data-driven PnL results; analysed and explained product marking and market impact on a per trade level to create substantial value and authority as a trusted control function.
   * Taught 5 technical workshops to the product control and finance departments which focused on best practices in data governance, data manipulation, machine learning, Excel integration, and pipeline development in a regulated environment.
-  * Created 8 general PnL analysis tools in Python to empower a non-technical team to execute advanced workflows.
-  * Automated 6 PnL reporting processes through custom Python scripts, leveraging Polars and xlwings to save 10+ hours a month.
+  * Created 8 customizable data models in Python, which empowered a non-technical team to execute advanced workflows during critical month-end reporting, which saved 15+ hours a month and mitigated human error completely.
   * Supervisor: Ray Guo
 
 * **Market Risk Summer Associate @ TD Securities** | 05/2024 - 08/2024
